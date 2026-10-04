@@ -12,7 +12,7 @@ Legado（阅读 App）书源。
 ### 一键导入
 
 ```
-legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.0.0%2Fbanshanren.json
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.1.0%2Fbanshanren.json
 ```
 
 手机浏览器打开上面这行，或转成二维码扫码。
@@ -22,11 +22,29 @@ legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Fl
 书源管理 → 右上角 ⋮ → 网络导入，粘贴：
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.0.0/banshanren.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.1.0/banshanren.json
 ```
 
-合一导入（含本站全部源，当前同单源）：
+合一导入（全部源）：
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.0.0/all.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.1.0/all.json
+```
+
+## 和图书
+
+- 站点：https://www.hetushu.com
+- 功能：搜索、详情、目录（1604 章实测）、正文、发现页（榜单）
+- 封面明文直链；正文站方水印已过滤；搜索需 Referer，已内置请求头
+
+### 一键导入
+
+```
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.1.0%2Fhetushu.json
+```
+
+### 网络导入
+
+```
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.1.0/hetushu.json
 ```
