@@ -12,7 +12,7 @@ Legado（阅读 App）书源。
 ### 一键导入
 
 ```
-legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.2.0%2Fbanshanren.json
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.3.0%2Fbanshanren.json
 ```
 
 手机浏览器打开上面这行，或转成二维码扫码。
@@ -22,13 +22,13 @@ legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Fl
 书源管理 → 右上角 ⋮ → 网络导入，粘贴：
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.2.0/banshanren.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.3.0/banshanren.json
 ```
 
 合一导入（全部源）：
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.2.0/all.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.3.0/all.json
 ```
 
 ## 和图书
@@ -40,13 +40,13 @@ https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.2.0/all.json
 ### 一键导入
 
 ```
-legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.2.0%2Fhetushu.json
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.3.0%2Fhetushu.json
 ```
 
 ### 网络导入
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.2.0/hetushu.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.3.0/hetushu.json
 ```
 
 ## 遮雪小说网
@@ -59,11 +59,29 @@ https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.2.0/hetushu.json
 ### 一键导入
 
 ```
-legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.2.0%2Fzhexueshi.json
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.3.0%2Fzhexueshi.json
 ```
 
 ### 网络导入
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.2.0/zhexueshi.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.3.0/zhexueshi.json
+```
+
+## 笔趣阁（推荐）
+
+- 站点：https://m.bqge.cc
+- 功能：搜索（POST，精确命中《神秘复苏》原书）、详情、目录（1596 章，32 页自动翻页实测收敛）、正文（长章节自动拼页，水印已过滤）、发现页（7 个分类带翻页）
+- 搜索页、详情页封面简介全有；UTF-8 无盾直连
+
+### 一键导入
+
+```
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.3.0%2Fbiquge.json
+```
+
+### 网络导入
+
+```
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.3.0/biquge.json
 ```
