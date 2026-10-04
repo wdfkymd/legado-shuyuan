@@ -1,0 +1,52 @@
+[
+  {
+    "bookSourceComment": "顶点小说 - 搜索、详情、目录、单章正文已实测（《神秘复苏》1644 章）",
+    "bookSourceGroup": "顶点",
+    "bookSourceName": "顶点小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.dingdian365.com",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledExplore": false,
+    "exploreUrl": "",
+    "header": "",
+    "lastUpdateTime": 0,
+    "respondTime": 0,
+    "ruleBookInfo": {
+      "author": "span.x1:contains(作者) > a@text",
+      "coverUrl": "div.zhutu img@src",
+      "init": "",
+      "intro": "div.x3@text##^简介：\\s*##",
+      "kind": "span.x1:contains(类型)@text##类型：(.*)#$1",
+      "lastChapter": "span.x2:contains(最新章节) > a@text",
+      "name": "div.right_border > h1@text",
+      "tocUrl": "a:contains(全部章节目录)@href",
+      "wordCount": ""
+    },
+    "ruleContent": {
+      "content": "div#txt@text##一秒记住[^！]*！##",
+      "imageStyle": "0",
+      "nextContentUrl": "a:contains(下一章)@href",
+      "title": "div#neirong h1@text"
+    },
+    "ruleExplore": {},
+    "ruleSearch": {
+      "author": "span.zuo > a@text",
+      "bookList": "ul.search > li:not(.fen)",
+      "bookUrl": "span.name > a@href",
+      "coverUrl": "",
+      "intro": "",
+      "kind": "span.lei > a@text",
+      "lastChapter": "span.jie > a@text",
+      "name": "span.name > a@text",
+      "wordCount": ""
+    },
+    "ruleToc": {
+      "chapterList": "ul.info > li > a",
+      "chapterName": "@text",
+      "chapterUrl": "@href"
+    },
+    "searchUrl": "https://www.dingdian365.com/s.php,{\"method\":\"POST\",\"body\":\"s={{key}}&type=articlename&submit=\"}",
+    "weight": 0
+  }
+]
