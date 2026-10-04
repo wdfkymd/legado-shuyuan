@@ -12,7 +12,7 @@ Legado（阅读 App）书源。
 ### 一键导入
 
 ```
-legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.1.0%2Fbanshanren.json
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.1.1%2Fbanshanren.json
 ```
 
 手机浏览器打开上面这行，或转成二维码扫码。
@@ -22,13 +22,13 @@ legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Fl
 书源管理 → 右上角 ⋮ → 网络导入，粘贴：
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.1.0/banshanren.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.1.1/banshanren.json
 ```
 
 合一导入（全部源）：
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.1.0/all.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.1.1/all.json
 ```
 
 ## 和图书
@@ -40,11 +40,11 @@ https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.1.0/all.json
 ### 一键导入
 
 ```
-legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.1.0%2Fhetushu.json
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.1.1%2Fhetushu.json
 ```
 
 ### 网络导入
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.1.0/hetushu.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.1.1/hetushu.json
 ```
