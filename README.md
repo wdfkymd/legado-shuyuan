@@ -48,3 +48,51 @@ legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Fl
 ```
 https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.0/alicesw.json
 ```
+
+## 笔迷读
+
+- 站点：https://www.bimidu.com
+
+- 功能：搜索（GBK编码）、详情、目录（1189 章全量）、正文（多页自动拼接）
+
+- 《神秘复苏》原著已验证：搜索→详情→目录→正文全链路通过
+
+### 一键导入
+
+```
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40main%2Fbimidu.json
+```
+
+手机浏览器打开上面这行，或转成二维码扫码。
+
+### 网络导入
+
+书源管理 → 右上角 ⋮ → 网络导入，粘贴：
+
+```
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@main/bimidu.json
+```
+
+## 顶点小说
+
+- 站点：https://www.dingdian365.com
+
+- 功能：搜索（POST）、详情、目录（1635 章全量，独立目录页）、正文（广告过滤）
+
+- 《神秘复苏》原著已验证：详情→目录→正文通过；搜索接口有频率限制（1分钟10次）
+
+### 一键导入
+
+```
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40main%2Fdingdian365.json
+```
+
+手机浏览器打开上面这行，或转成二维码扫码。
+
+### 网络导入
+
+书源管理 → 右上角 ⋮ → 网络导入，粘贴：
+
+```
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@main/dingdian365.json
+```
