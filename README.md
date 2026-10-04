@@ -12,7 +12,7 @@ Legado（阅读 App）书源。
 ### 一键导入
 
 ```
-legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.4.1%2Fbanshanren.json
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.5.0%2Fbanshanren.json
 ```
 
 手机浏览器打开上面这行，或转成二维码扫码。
@@ -22,11 +22,29 @@ legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Fl
 书源管理 → 右上角 ⋮ → 网络导入，粘贴：
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.4.1/banshanren.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.0/banshanren.json
 ```
 
 合一导入（全部源）：
 
 ```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.4.1/all.json
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.0/all.json
+```
+
+## 爱丽丝书屋
+
+- 站点：https://www.alicesw.com（发布页：https://alicesw.click/，入口可能更换）
+- 功能：搜索（精确命中《神秘复苏》原书，1610 章）、详情（封面明文）、目录（单页全量正序）、正文、发现页（最新/人气/字数排行带翻页）
+- 搜索页无封面（站方列表纯文字）；详情页封面简介全有；站方地域拦只针对美国机房，无影响
+
+### 一键导入
+
+```
+legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.5.0%2Falicesw.json
+```
+
+### 网络导入
+
+```
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.0/alicesw.json
 ```
