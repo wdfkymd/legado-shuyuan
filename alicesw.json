@@ -1,1 +1,44 @@
-[{"g": "爱丽丝", "n": "爱丽丝书屋", "bookSourceType": 0, "u": "https://www.alicesw.com", "customOrder": 0, "e": true, "enabledExplore": true, "exploreUrl": "最新更新::/all/order/update_time+desc.html?page={{page}}\n人气排行::/all/order/hits+desc.html?page={{page}}\n字数排行::/all/order/word+desc.html?page={{page}}", "h": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\"}", "lastUpdateTime": 0, "respondTime": 180000, "ri": {"a": "div.novel_info a[href*=\"f=author\"]@text", "cu": "div.pic img@src", "it": "", "i": "div.jianjie > p@text", "k": "div.novel_info a[href*=\"/lists/\"]@text", "lc": "div.novel_info p:contains(新) a@text", "n": "div.novel_title@text", "tu": "a:contains(查看所有章节)@href", "wc": "div.novel_info p:contains(数)@text##.*数：(\\S+).*#$1"}, "rc": {"c": ".read-content p@textNodes", "is": "0", "ncu": "a:contains(下一章)@href", "t": "div.text-head > h3@text"}, "ruleExplore": {"a": "li.four@text", "bl": "div.rec_rullist > ul:has(li.two > a)", "u": "li.two > a@href", "cu": "", "i": "", "k": "li.sev a@text", "lc": "li.three > a@text", "n": "li.two > a@text"}, "rs": {"a": "p:contains(作者) > a@text", "bl": "div.list-group > div.list-group-item", "u": "h5 > a@href", "cu": "img@src", "i": "p.content-txt@text", "k": "small@text##\\[(.*)\\]#$1", "lc": "", "n": "h5 > a@text##^\\d+\\.\\s*", "wc": "p:contains(字数)@text##.*字数：(\\S+).*#$1"}, "rt": {"cl": "ul.mulu_list > li > a", "cn": "@text", "cu": "@href"}, "su": "https://www.alicesw.com/search.html?q={{key}}&f=_all", "w": 0}]
+{
+  "bookSourceName": "爱丽丝书屋",
+  "bookSourceUrl": "https://www.alicesw.com",
+  "bookSourceType": 0,
+  "customOrder": 0,
+  "enabled": true,
+  "enabledExplore": true,
+  "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\"}",
+  "searchUrl": "",
+  "exploreUrl": "最新更新::/all/order/update_time+desc.html?page={{page}}\n人气排行::/all/order/hits+desc.html?page={{page}}\n字数排行::/all/order/word+desc.html?page={{page}}",
+  "ruleSearch": {
+    "author": "p:contains(作者) > a@text",
+    "bookList": "div.list-group > div.list-group-item",
+    "bookUrl": "h5 > a@href",
+    "coverUrl": "img@src",
+    "intro": "p.content-txt@text",
+    "kind": "small@text##\\[(.*)\\]#$1",
+    "lc": "",
+    "name": "h5 > a@text##^\\d+\\.\\s*",
+    "wc": "p:contains(字数)@text##.*字数：(\\S+).*#$1"
+  },
+  "ruleBookInfo": {
+    "author": "div.novel_info a[href*=\"f=author\"]@text",
+    "coverUrl": "div.pic img@src",
+    "it": "",
+    "intro": "div.jianjie > p@text",
+    "kind": "div.novel_info a[href*=\"/lists/\"]@text",
+    "lc": "div.novel_info p:contains(新) a@text",
+    "name": "div.novel_title@text",
+    "tu": "a:contains(查看所有章节)@href",
+    "wc": "div.novel_info p:contains(数)@text##.*数：(\\S+).*#$1"
+  },
+  "ruleToc": {
+    "cl": "ul.mulu_list > li > a",
+    "cn": "@text",
+    "coverUrl": "@href"
+  },
+  "ruleContent": {
+    "content": ".read-content p@textNodes",
+    "is": "0",
+    "nextContentUrl": "a:contains(下一章)@href",
+    "title": "div.text-head > h3@text"
+  }
+}
