@@ -2,6 +2,27 @@
 
 Legado（阅读 App）书源。
 
+## 网络导入
+
+书源管理 → 右上角 ⋮ → 网络导入，粘贴：
+
+**搬山人小说网：**
+```
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.1/banshanren.json
+```
+
+**爱丽丝书屋：**
+```
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.1/alicesw.json
+```
+
+**合一导入（全部源）：**
+```
+https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.1/all.json
+```
+
+---
+
 ## 搬山人小说网
 
 - 站点：https://www.banshanren.com
@@ -17,20 +38,6 @@ legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Fl
 
 手机浏览器打开上面这行，或转成二维码扫码。
 
-### 网络导入
-
-书源管理 → 右上角 ⋮ → 网络导入，粘贴：
-
-```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.1/banshanren.json
-```
-
-合一导入（全部源）：
-
-```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.1/all.json
-```
-
 ## 爱丽丝书屋
 
 - 站点：https://www.alicesw.com（发布页：https://alicesw.click/，入口可能更换）
@@ -41,10 +48,4 @@ https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.1/all.json
 
 ```
 legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Flegado-shuyuan%40v1.5.1%2Falicesw.json
-```
-
-### 网络导入
-
-```
-https://cdn.jsdelivr.net/gh/wdfkymd/legado-shuyuan@v1.5.1/alicesw.json
 ```
