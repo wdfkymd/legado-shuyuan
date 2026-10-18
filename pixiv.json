@@ -1,0 +1,41 @@
+[
+  {
+    "u": "https://www.pixiv.net",
+    "n": "Pixiv小说",
+    "g": "二次元,pixiv",
+    "bookSourceType": 0,
+    "e": true,
+    "w": 0,
+    "respondTime": 30000,
+    "h": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
+      "Referer": "https://www.pixiv.net/",
+      "Cookie": "PHPSESSID=请替换为你自己的Cookie"
+    },
+    "bookSourceComment": "需要登录态：去浏览器登录 pixiv 后，把 Cookie 中的 PHPSESSID 填到上面。R18 内容需要账号已通过年龄认证。",
+    "su": "https://www.pixiv.net/ajax/search/novels/{{key}}?word={{key}}&order=date_d&mode=all&p={{page}}&s_mode=s_tag&type=novel&lang=zh",
+    "rs": {
+      "bl": "@json:$.body.novel.data",
+      "n": "@json:$.title",
+      "a": "@json:$.userName",
+      "u": "@json:$.id##(.*)#https://www.pixiv.net/ajax/novel/$1?lang=zh",
+      "i": "@json:$.description",
+      "wc": "@json:$.textCount"
+    },
+    "ri": {
+      "n": "@json:$.body.title",
+      "a": "@json:$.body.userName",
+      "i": "@json:$.body.description"
+    },
+    "rt": {
+      "cl": "@json:$.body",
+      "cn": "@json:$.title",
+      "cu": "@json:$.id##(.*)#https://www.pixiv.net/ajax/novel/$1?lang=zh"
+    },
+    "rc": {
+      "t": "@json:$.body.title",
+      "c": "@json:$.body.text"
+    },
+    "lastUpdateTime": 1792419600000
+  }
+]
