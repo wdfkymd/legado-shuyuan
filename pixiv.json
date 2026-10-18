@@ -36,6 +36,15 @@
       "t": "@json:$.body.title",
       "c": "@json:$.body.text"
     },
-    "lastUpdateTime": 1792419600000
+    "lastUpdateTime": 1792419600000,
+    "exploreUrl": "最新原创::https://www.pixiv.net/ajax/search/novels/原创?word=原创&order=date_d&mode=all&p={page}&s_mode=s_tag&type=novel&lang=zh\n短篇小说::https://www.pixiv.net/ajax/search/novels/短篇?word=短篇&order=date_d&mode=all&p={page}&s_mode=s_tag&type=novel&lang=zh\n长篇连载::https://www.pixiv.net/ajax/search/novels/长篇?word=长篇&order=date_d&mode=all&p={page}&s_mode=s_tag&type=novel&lang=zh",
+    "ruleExplore": {
+      "bl": "@json:$.body.novel.data",
+      "n": "@json:$.title",
+      "a": "@json:$.userName",
+      "u": "@json:$.id##(.*)#https://www.pixiv.net/ajax/novel/$1?lang=zh",
+      "i": "@json:$.description",
+      "wc": "@json:$.textCount"
+    }
   }
 ]
