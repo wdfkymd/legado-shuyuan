@@ -9,9 +9,10 @@
     "respondTime": 30000,
     "h": {
       "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36",
-      "Referer": "https://www.pixiv.net/"
+      "Referer": "https://www.pixiv.net/",
+      "Cookie": "PHPSESSID=请替换为你自己的Cookie"
     },
-    "bookSourceComment": "在书源管理里点“登录”，在打开的页面登录 pixiv 账号即可。R18 内容需要账号已通过年龄认证。",
+    "bookSourceComment": "需要登录：手机浏览器登录 pixiv.net 后，复制 Cookie 里的 PHPSESSID，填到本源 header 的 Cookie 中（替换等号后面的占位文字）。R18 内容需要账号已通过年龄认证。",
     "su": "https://www.pixiv.net/ajax/search/novels/{{key}}?word={{key}}&order=date_d&mode=all&p={{page}}&s_mode=s_tag&type=novel&lang=zh",
     "rs": {
       "bl": "@json:$.body.novel.data",
@@ -35,7 +36,6 @@
       "t": "@json:$.body.title",
       "c": "@json:$.body.text"
     },
-    "lastUpdateTime": 1792419600000,
-    "loginUrl": "https://accounts.pixiv.net/login?lang=zh&view_type=page"
+    "lastUpdateTime": 1792419600000
   }
 ]
