@@ -59,7 +59,7 @@ legado://import/bookSource?src=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2Fwdfkymd%2Fl
 
 - 站点：https://www.pixiv.net/novel
 - 功能：搜索（单篇 + 系列，系列结果自动按系列成书）、详情、目录（系列用 content_titles 全量标题列表，单篇只有 1 章）、正文
-- 必须登录，但寻书没有书源登录按钮：本源不设 loginUrl。用法是手机浏览器先登录 pixiv，复制 PHPSESSID Cookie，编辑本源把 header 里的占位 Cookie 换成自己的值再保存；占位不换就用不了，Cookie 过期要重新复制
+- 必须登录：导入后在书源管理里打开本源登录 pixiv 账号，登录态存在 Cookie 里；未登录时 pixiv ajax 接口直接报错
 - 规则已在本机按 Legado @js 求值对测试数据跑通（搜索 2 条、系列目录 3 章、单篇目录 1 章、正文 5 段），但本机机房 IP 直连 pixiv ajax 全是 403，真站数据尚未在本机拉通，手机上家用网络 + 登录 Cookie 后再实测
 - 暂无发现页；正文内嵌插图 [pixivimage:xxx] 只按原文文本显示，不转图片；R18 只在账号本身有权限时可见
 

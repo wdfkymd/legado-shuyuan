@@ -1,6 +1,6 @@
 [
   {
-    "bookSourceComment": "Pixiv 小说（Legado 格式，自写简化版，非 PixivSource 官方源）\n\n重要：寻书 App 没有书源登录功能、连登录按钮都没有，所以本源不设 loginUrl，登录只能走手动 Cookie 方式：\n1. 手机浏览器里先登录好 pixiv 账号；\n2. 复制登录后的 PHPSESSID Cookie；\n3. 在寻书里编辑本源，把 header 里的 PHPSESSID=请替换为你自己的Cookie 换成你自己的值，保存后再搜索。\n占位 Cookie 不换就用不了；Cookie 不要发给别人，过期后要重新复制。\n\n支持：搜索（单篇 + 系列，系列结果自动按系列成书）、详情、目录（系列用 content_titles 全量标题列表，单篇只有 1 章）、正文（ajax 小说详情的 content 字段）。\n不支持：发现页；正文内嵌插图 [pixivimage:xxx] 只按原文文本显示，不转成图片；R18 内容只在登录账号本身有权限时才能看到，本源不绕过任何权限。\n注意：pixiv 对机房 IP 审查很严，本源作者在本机（机房 IP）实测 ajax 接口直接返回 403，属 IP/登录问题而非规则问题；手机上用家用网络 + 登录 Cookie 后可用。",
+    "bookSourceComment": "Pixiv 小说（Legado 格式，自写简化版，非 PixivSource 官方源）\n\n用法：Legado / 开源阅读 → 书源管理 → 网络导入 → 粘贴本文件链接或本地导入。导入后必须先登录：书源管理 → 本源 → 登录（打开 accounts.pixiv.net 登录页），登录态存在 Cookie 里（enabledCookieJar），未登录时 pixiv ajax 接口会返回错误，搜索/详情/目录/正文都拿不到。\n\n支持：搜索（单篇 + 系列，系列结果自动按系列成书）、详情、目录（系列用 content_titles 全量标题列表，单篇只有 1 章）、正文（ajax 小说详情的 content 字段）。\n\n不支持：发现页（排行榜/推荐接口返回结构不同且同样要求登录，本版未做）；正文内嵌插图 [pixivimage:xxx] 只按原文文本显示，不转成图片；R18 内容只在登录账号本身有权限时才能看到，本源不绕过任何权限。\n\n注意：pixiv 对机房 IP 审查很严，本源作者在本机（机房 IP）实测 ajax 接口直接返回 403，属 IP/登录问题而非规则问题；手机上用家用网络 + 登录 Cookie 后可用。详见实测报告。",
     "bookSourceGroup": "Pixiv",
     "bookSourceName": "Pixiv 小说",
     "bookSourceType": 0,
@@ -10,8 +10,9 @@
     "enabled": true,
     "enabledCookieJar": true,
     "enabledExplore": false,
-    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36\", \"Referer\": \"https://www.pixiv.net/\", \"Cookie\": \"PHPSESSID=请替换为你自己的Cookie\"}",
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36\", \"Referer\": \"https://www.pixiv.net/\"}",
     "lastUpdateTime": 0,
+    "loginUrl": "https://accounts.pixiv.net/login?lang=zh&source=pc&view_type=page&ref=wwwtop_accounts_index&return_to=https://www.pixiv.net/",
     "respondTime": 180000,
     "ruleBookInfo": {
       "author": "userName",
