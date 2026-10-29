@@ -1,0 +1,49 @@
+[
+  {
+    "bookSourceComment": "Pixiv 小说（Legado 格式，自写简化版，非 PixivSource 官方源）\n\n用法：Legado / 开源阅读 → 书源管理 → 网络导入 → 粘贴本文件链接或本地导入。导入后必须先登录：书源管理 → 本源 → 登录（打开 accounts.pixiv.net 登录页），登录态存在 Cookie 里（enabledCookieJar），未登录时 pixiv ajax 接口会返回错误，搜索/详情/目录/正文都拿不到。\n\n支持：搜索（单篇 + 系列，系列结果自动按系列成书）、详情、目录（系列用 content_titles 全量标题列表，单篇只有 1 章）、正文（ajax 小说详情的 content 字段）。\n\n不支持：发现页（排行榜/推荐接口返回结构不同且同样要求登录，本版未做）；正文内嵌插图 [pixivimage:xxx] 只按原文文本显示，不转成图片；R18 内容只在登录账号本身有权限时才能看到，本源不绕过任何权限。\n\n注意：pixiv 对机房 IP 审查很严，本源作者在本机（机房 IP）实测 ajax 接口直接返回 403，属 IP/登录问题而非规则问题；手机上用家用网络 + 登录 Cookie 后可用。详见实测报告。",
+    "bookSourceGroup": "Pixiv",
+    "bookSourceName": "Pixiv 小说",
+    "bookSourceType": 0,
+    "bookSourceUrl": "https://www.pixiv.net/novel",
+    "bookUrlPattern": "(https?://)?(www\\.)?pixiv\\.net/(novel/(show\\.php\\?id=|series/)?|ajax/novel/(series/)?)\\d+.*",
+    "customOrder": 0,
+    "enabled": true,
+    "enabledCookieJar": true,
+    "enabledExplore": false,
+    "header": "{\"User-Agent\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36\", \"Referer\": \"https://www.pixiv.net/\"}",
+    "lastUpdateTime": 0,
+    "loginUrl": "https://accounts.pixiv.net/login?lang=zh&source=pc&view_type=page&ref=wwwtop_accounts_index&return_to=https://www.pixiv.net/",
+    "respondTime": 180000,
+    "ruleBookInfo": {
+      "author": "userName",
+      "coverUrl": "coverUrl",
+      "init": "@js:\n(function() {\n  var b = JSON.parse(result).body;\n  function tagText(tags) {\n    if (!tags) return '';\n    return tags.map(function(t) { return (typeof t === 'string') ? t : (t.tag || ''); }).filter(function(x) { return !!x; }).join(',');\n  }\n  if (book.bookUrl.indexOf('/series/') >= 0) {\n    var sid = book.bookUrl.match(/series\\/(\\d+)/)[1];\n    return {\n      title: b.title || '',\n      userName: b.userName || '',\n      description: b.description || b.caption || '',\n      coverUrl: b.coverUrl || '',\n      textCount: b.total || 0,\n      tags: tagText(b.tags),\n      tocUrl: 'https://www.pixiv.net/ajax/novel/series/' + sid + '/content_titles?lang=zh'\n    };\n  }\n  if (b.seriesNavData && b.seriesNavData.seriesId) {\n    return {\n      title: b.seriesNavData.title || b.title,\n      userName: b.userName || '',\n      description: b.description || '',\n      coverUrl: b.coverUrl || '',\n      textCount: b.textCount || 0,\n      tags: tagText(b.tags),\n      tocUrl: 'https://www.pixiv.net/ajax/novel/series/' + b.seriesNavData.seriesId + '/content_titles?lang=zh'\n    };\n  }\n  return {\n    title: b.title || '',\n    userName: b.userName || '',\n    description: b.description || '',\n    coverUrl: b.coverUrl || '',\n    textCount: b.textCount || 0,\n    tags: tagText(b.tags),\n    tocUrl: book.bookUrl\n  };\n})();",
+      "intro": "description",
+      "kind": "tags",
+      "name": "title",
+      "tocUrl": "tocUrl",
+      "wordCount": "textCount"
+    },
+    "ruleContent": {
+      "content": "@js:\nJSON.parse(result).body.content || '';"
+    },
+    "ruleSearch": {
+      "author": "author",
+      "bookList": "@js:\n(function() {\n  var d = JSON.parse(result).body.novel.data;\n  return d.map(function(v) {\n    var isSeries = !!v.seriesId;\n    return {\n      name: v.title,\n      author: v.userName,\n      bookUrl: isSeries ? 'https://www.pixiv.net/ajax/novel/series/' + v.seriesId + '?lang=zh' : 'https://www.pixiv.net/ajax/novel/' + v.id + '?lang=zh',\n      coverUrl: v.coverUrl || v.url || '',\n      intro: v.description || '',\n      kind: (v.tags || []).join(','),\n      wordCount: v.textCount || 0,\n      lastChapter: isSeries ? (v.seriesTitle || v.title) : v.title\n    };\n  });\n})();",
+      "bookUrl": "bookUrl",
+      "coverUrl": "coverUrl",
+      "intro": "intro",
+      "kind": "kind",
+      "lastChapter": "lastChapter",
+      "name": "name",
+      "wordCount": "wordCount"
+    },
+    "ruleToc": {
+      "chapterList": "@js:\n(function() {\n  var b = JSON.parse(result).body;\n  if (Array.isArray(b)) {\n    return b.map(function(v) {\n      return { title: v.title, chapterUrl: 'https://www.pixiv.net/ajax/novel/' + v.id + '?lang=zh' };\n    });\n  }\n  return [{ title: b.title, chapterUrl: book.bookUrl }];\n})();",
+      "chapterName": "title",
+      "chapterUrl": "chapterUrl"
+    },
+    "searchUrl": "@js:\n'https://www.pixiv.net/ajax/search/novels/' + encodeURIComponent(key) + '?word=' + encodeURIComponent(key) + '&order=date_d&mode=all&p=' + page + '&s_mode=s_tag&lang=zh';",
+    "weight": 0
+  }
+]
